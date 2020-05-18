@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSの勉強</title>
+  <style>
+    .job {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .warn {
+      font-size: 40px;
+      color: red;
+    }
+
+    .container {
+      width: 200px;
+      margin: 100px auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <script>
+    'use strict';
+    {
+      class Car{
+        constructor({title}){
+          this.name=title;
+        }
+        drive(){
+          return 'ウィーン'; 
+        }
+      }
+
+      class Toyota extends Car {
+        constructor(unchi){
+          super(unchi);
+          this.color=unchi.color
+        }
+        honk(){
+          return 'ぶぶー！！！';
+        }
+      }
+
+      const toyota =new Toyota({color : 'red', title:'アクア'});
+
+      console.log(toyota.honk());
+      console.log(toyota);
+      console.log(toyota.drive());
+    }
+  </script>
+
+
+</body>
+
+</html>
